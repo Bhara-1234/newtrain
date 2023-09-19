@@ -37,3 +37,47 @@ public class BookingServlet extends HttpServlet {
 	}
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+====================================================================
+
+
+
+
+
+
+
+
+
+	select * from TktTickets
+CREATE TABLE TktTickets (
+    ticket_id  serial PRIMARY KEY,
+    from_location VARCHAR(255) NOT NULL,
+    to_location VARCHAR(255) NOT NULL,
+    train VARCHAR(255) NOT NULL,
+    class VARCHAR(255) NOT NULL,
+    date DATE NOT NULL
+);
+ALTER TABLE TktTickets
+ALTER COLUMN date TYPE VARCHAR(20); -- Change the size (20) based on your requirements
+select * from TktPassengers 
+drop table  tktpassengers
+create table tktpassengers (name varchar(50),age varchar(50),gender varchar(50)  );
+RENAME COLUMN ticket_id TO pnr;
+insert into TktPassengers values(?,?,?)
+create table  tktpassengers as select * from  TktPassengers
+select * from tktpassengers
+
